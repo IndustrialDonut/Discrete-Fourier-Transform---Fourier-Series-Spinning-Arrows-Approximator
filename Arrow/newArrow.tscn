@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Arrow/ARROW.png" type="Texture" id=1]
+[ext_resource path="res://Arrow/arrow.gd" type="Script" id=2]
+
+[node name="arrow" type="Node2D"]
+position = Vector2( 397.782, 272.307 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.415686 )
+position = Vector2( 62.7932, -2.45264 )
+rotation = 3.14159
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+
+[node name="tip" type="Node2D" parent="Sprite"]
+position = Vector2( 65.0928, 691.685 )
+scale = Vector2( 3.04748, 2.95858 )
+
+[node name="Camera2D" type="Camera2D" parent="Sprite/tip"]
+rotating = true
